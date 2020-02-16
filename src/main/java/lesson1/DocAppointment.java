@@ -1,8 +1,15 @@
 package lesson1;
 
-public class DocAppointment {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component("DocAppointment")
+public class DocAppointment implements IDocAppointment {
     private Doctor doctor;
 
+    @Autowired
+    @Qualifier("GpDoctor")
     public void setDoctor(Doctor doctor) {
         this.doctor = doctor;
     }

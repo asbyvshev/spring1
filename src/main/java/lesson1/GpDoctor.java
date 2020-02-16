@@ -1,5 +1,8 @@
 package lesson1;
 
+import org.springframework.stereotype.Component;
+
+@Component("GpDoctor")
 public class GpDoctor implements Doctor {
     private int office = 321;
 

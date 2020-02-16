@@ -1,5 +1,8 @@
 package lesson1;
 
+import org.springframework.stereotype.Component;
+
+@Component("Surgeon")
 public class Surgeon implements Doctor {
     private int office = 101;
 
